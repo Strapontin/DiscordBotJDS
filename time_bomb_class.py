@@ -1,2 +1,3 @@
-class time_bomb:
-  id = 0
+class time_bomb(object):
+
+    id = 0
