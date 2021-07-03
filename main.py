@@ -18,8 +18,9 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
+    print(message.content)
     if message.content == "!cleardb":
-      del_db_keys()
+        del_db_keys()
     await on_message_detected(client, message)
 
 
@@ -32,9 +33,11 @@ async def on_raw_reaction_add(payload):
 async def on_raw_reaction_remove(payload):
     await on_reaction_removed(client, payload)
 
+
 def del_db_keys():
-  for key in db.keys():
-    print(f"key {key} deleted")
-    del db[key]
+    for key in db.keys():
+        print(f"key {key} deleted")
+        del db[key]
+
 
 client.run(TOKEN)

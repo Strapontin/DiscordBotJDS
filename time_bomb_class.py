@@ -1,3 +1,8 @@
-class time_bomb(object):
+class time_bomb():
 
-    id = 0
+	def __init__(self):
+		self.id = 0
+		self.creator = ""
+		self.game_started = False
+		self.players = []
+    self.mocked_players = []
